@@ -17,24 +17,24 @@
 
     <div class="bg-white text-left font-bold items-center p-7 md:p-8 m-4 md:m-8" style="color: #264e70; border: 1px solid #264e70;">
         <p class="text-xl mb-4">You are at the market buying plantains. The market woman says a bunch of 3 plantains costs 5k. What do you do?</p>
-        <div class="grid md:grid-cols-3 gap-3">
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="1" class="mr-2"> Pay immediately
+        <div id="first" class="grid md:grid-cols-3 gap-3">
+        <label  class="block mb-2">
+            <input id="fq1" type="checkbox" name="q1" value="1" class="q1 mr-2"> Pay immediately
+        </label>
+        <label  class="block mb-2">
+            <input id="fq2" type="checkbox" name="q1" value="2" class="q1 mr-2"> Bargain for 4k
+        </label>
+        <label  class="block mb-2">
+            <input id="fq3" type="checkbox" name="q1" value="3" class="q1 mr-2"> Bargain for 2k
+        </label>
+        <label  class="block mb-2">
+            <input id="fq4" type="checkbox" name="q1" value="5" class="q1 mr-2"> 'Mumsy stop playing'
+        </label>
+        <label  class="block mb-2">
+            <input id="fq5" type="checkbox" name="q1" value="4" class="q1 mr-2"> Walk away
         </label>
         <label class="block mb-2">
-            <input type="checkbox" name="q1" value="2" class="mr-2"> Bargain for 4k
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="3" class="mr-2"> Bargain for 2k
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> 'Mumsy stop playing'
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="4" class="mr-2"> Walk away
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> Thief it
+            <input id="fq6"  type="checkbox" name="q1" value="5" class="q1 mr-2"> Thief it
         </label>
     </div>
     </div>
@@ -148,7 +148,7 @@
         </div>
 
 
-    <script>
+    <!-- <script>
         function calculateSteeze() {
             let score = 0;
             const questions = document.querySelectorAll('.question');
@@ -162,8 +162,9 @@
             document.getElementById('quiz').classList.add('hidden');
             document.getElementById('results').classList.remove('hidden');
         }
-    </script>
+    </script> -->
 
+    <script src="index.js"></script>
 </body>
 
 </html>
