@@ -1,168 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steeze Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>The Steeze Calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
-    <h1 class="text-2xl text-center py-5 text-white font-bold" style="background-color: #264e70;">Steeze Calculator</h1>
-    <div class="bg-white text-center font-bold pt-2.5 pb-4 text-sm" style="color: #264e70; border-bottom: 1px solid #264e70;">Shey you get steeze?</div>
+<body class="text-[#0C0C0C] bg-gray-200">
+    <h1 class="bg-[#0C0C0C] text-4xl text-center font-bold py-4 text-white px-4">The Steeze Calculator 🌊</h1>
+    <div class="text-[#0C0C0C] bg-white text-center font-bold pt-3 pb-3 px-8 border-b-[1px] border-[#0C0C0C]">Are you a certified steeze OG or just another regular peasant? Lets find out! 🔥 </div>
+
+    <div class="flex flex-col md:flex-row md:mx-5 my-5 md:my-5">
+        <main class="md:w-[70%]">
+
+            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+                <h3 class="font-bold text-[22px] mb-5">What does your crush calls you? 🤔</h3>
+                <div class="full-width w-full">
+                        <input type="input" name="q1" placeholder="Werey, Nnamdi Importer Exporter, Turkey 2 Kilo or My Favourite Bush Meat" class="w-full font-bold border-[1px] border-[#0C0C0C] p-3 rounded-lg">
+                </div>
+            </div>
 
 
-    <div class="bg-white text-left font-bold items-center p-7 md:p-8 m-4 md:m-8" style="color: #264e70; border: 1px solid #264e70;">
-        <p class="text-xl mb-4">You are at the market buying plantains. The market woman says a bunch of 3 plantains costs 5k. What do you do?</p>
-        <div class="grid md:grid-cols-3 gap-3">
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="1" class="mr-2"> Pay immediately
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="2" class="mr-2"> Bargain for 4k
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="3" class="mr-2"> Bargain for 2k
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> 'Mumsy stop playing'
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="4" class="mr-2"> Walk away
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> Thief it
-        </label>
+            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+                <h3 class="font-bold text-[22px] mb-5">You are at the market buying plantains. The market woman says a bunch of 3 plantains costs 5k. What do you do? 🤔</h3>
+                <div class="grid md:grid-cols-3 gap-3">
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="1" class="mr-2"> Pay immediately
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="2" class="mr-2"> 'Mumsy stop playing'
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="3" class="mr-2"> Bargain for 4k
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="4" class="mr-2"> Bargain for 2k
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="5" class="mr-2"> Walk away
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2 hover:text-red-700">
+                        <input type="checkbox" name="q1" value="6" class="mr-2"> Thief it
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+                <h3 class="font-bold text-[22px] mb-5">You just finished eating at a local restaurant in your area and you are thirsty AF. What do you do? 🤔</h3>
+                <div class="grid md:grid-cols-3 gap-3">
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="1" class="mr-2"> Wait until i get home to drink water
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="2" class="mr-2"> Order a bottle of water
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="3" class="mr-2"> Order sachet water (pure water)
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="4" class="mr-2"> Drink the free water offered at the canteen
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="5" class="mr-2"> Swallow saliva and keep it moving
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="6" class="mr-2"> What is water?
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+                <h3 class="font-bold text-[22px] mb-5">You are at a party and the multi-millionaires are making it rain, you have 2500 naira on you and you are sure you can 'codedly' pick thirteen 1000 naira notes from the ground. What do you do? 🤔</h3>
+                <div class="grid md:grid-cols-3 gap-3">
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="1" class="mr-2"> Pick 3 of the naira notes and lock up
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="2" class="mr-2"> Finesse all the 13 notes and call it a day
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="3" class="mr-2"> Make sure my bag is full before leaving there
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="4" class="mr-2"> I don't need the money, I'm good with my 2500 naira
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="5" class="mr-2"> I would make my 2500 naira rain
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="6" class="mr-2"> Why is rain falling at the party?
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+                <h3 class="font-bold text-[22px] mb-5"></h3>
+                <div class="grid md:grid-cols-3 gap-3">
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="1" class="mr-2">
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="2" class="mr-2">
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="3" class="mr-2">
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="4" class="mr-2">
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="5" class="mr-2">
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="6" class="mr-2">
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+                <h3 class="font-bold text-[22px] mb-5"></h3>
+                <div class="grid md:grid-cols-3 gap-3">
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="1" class="mr-2">
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="2" class="mr-2">
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="3" class="mr-2">
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="4" class="mr-2">
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="5" class="mr-2">
+                    </label>
+                    <label class="font-bold text-base text-[#323232] block mb-2">
+                        <input type="checkbox" name="q1" value="6" class="mr-2">
+                    </label>
+                </div>
+            </div>
+
+
+
+            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+                <button class="rounded-lg font-bold text-white px-7 py-4 bg-[#0C0C0C] hover:bg-red-700">Get Your Steeze
+                    Score</button>
+            </div>
+
+        </main>
+
+        <aside class="md:w-[30%]">
+            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+                <h3 class="font-bold text-[22px] mb-5">Our little play project ✨</h3>
+                <p class="text-base mb-5 font-bold text-[#323232]">Out of nowhere, we came up with an idea to create a web app related to one of the most overused slangs in our cohort "steeze".</p> 
+                <p class="text-base mb-5 font-bold text-[#323232]">In case you didnt know before now, steeze is straight up easy flow and mad unique style, confidence and skill expressed via actions that knock people back in awe and amazement. you either got it or you don't.</p>
+                </div>
+
+                <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+                    <h3 class="font-bold text-[22px] mb-5">Contributors 💻</h3>
+                    <p class="text-base mb-5 font-bold text-[#323232]">Oluwasegun Onakoya</p> 
+                    <p class="text-base mb-5 font-bold text-[#323232]">Avuwa Ganja</p>
+                    <p class="text-base mb-5 font-bold text-[#323232]">Olayinka Balogun</p>
+                </div>
+        </aside>
     </div>
-    </div>
-
-
-    <div class="bg-white text-left font-bold items-center p-7 md:p-8 m-4 md:m-8" style="color: #264e70; border: 1px solid #264e70;">
-        <p class="text-xl mb-4">What is your current phone brand?</p>
-        <div class="grid md:grid-cols-3 gap-3">
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="1" class="mr-2"> Apple
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="2" class="mr-2"> Samsung
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="3" class="mr-2"> Google Pixel
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> Huawei
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="4" class="mr-2"> Others
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> I don't have a phone
-        </label>
-    </div>
-    </div>
-
-
-    <div class="bg-white text-left font-bold items-center p-7 md:p-8 m-4 md:m-8" style="color: #264e70; border: 1px solid #264e70;">
-        <p class="text-xl mb-4">You just finished eating at a local restaurant in your area and you are thirsty AF. What do you do?</p>
-        <div class="grid md:grid-cols-3 gap-3">
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="1" class="mr-2"> Wait until i get home to drink water
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="2" class="mr-2"> Order a bottle of water
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="3" class="mr-2"> Order sachet water (pure water)
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> Drink the free water offered at the canteen
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="4" class="mr-2"> Swallow saliva
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> What is water?
-        </label>
-    </div>
-    </div>
-
-
-    <div class="bg-white text-left font-bold items-center p-7 md:p-8 m-4 md:m-8" style="color: #264e70; border: 1px solid #264e70;">
-        <p class="text-xl mb-4">You are at a party and the multi-millionaires are making it rain, you have 2500 naira on you and you are sure you can finesse thirteen 1k naira notes from the sprayed money on the ground. What do you do?</p>
-        <div class="grid md:grid-cols-3 gap-3">
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="1" class="mr-2"> Pick 3 notes and lock up
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="2" class="mr-2"> Finesse all the 13 notes
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="3" class="mr-2"> Make sure my bag is full before leaving there
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> I don't need no millionaires money
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="4" class="mr-2"> I would make my 2500 naira rain
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> Why is rain falling at the party?
-        </label>
-    </div>
-    </div>
-
-
-    <div class="bg-white text-left font-bold items-center p-7 md:p-8 m-4 md:m-8" style="color: #264e70; border: 1px solid #264e70;">
-        <p class="text-xl mb-4">Which of these food would really slap rn?</p>
-        <div class="grid md:grid-cols-3 gap-3">
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="1" class="mr-2"> Garri and Groundnut
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="2" class="mr-2"> Bread and Beans
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="3" class="mr-2"> Fufu and Egusi Soup
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> Bread and Indomie
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="4" class="mr-2"> Fried Rice and Chicken
-        </label>
-        <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> What is food?
-        </label>
-    </div>
-    </div>
-
-
-    <div class="bg-white text-left font-bold items-center p-7 md:p-8 m-4 md:m-8" style="color: #264e70; border: 1px solid #264e70;">
-        <div class="">
-            <div class="flex"><button onclick="calculateSteeze()" class="text-white px-4 py-2" style="background-color: #264e70;">Get Your Steeze
-            Score</button></div>
-        </div>
-        </div>
-
-
-    <script>
-        function calculateSteeze() {
-            let score = 0;
-            const questions = document.querySelectorAll('.question');
-            questions.forEach(question => {
-                const answer = question.querySelector('input[type="checkbox"]:checked');
-                if (answer) {
-                    score += parseInt(answer.value);
-                }
-            });
-            document.getElementById('score').innerText = score;
-            document.getElementById('quiz').classList.add('hidden');
-            document.getElementById('results').classList.remove('hidden');
-        }
-    </script>
 
 </body>
 
