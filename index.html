@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>The Steeze Calculator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -18,22 +18,22 @@
         <p class="text-xl mb-4">You are at the market buying plantains. The market woman says a bunch of 3 plantains costs 5k. What do you do?</p>
         <div class="grid md:grid-cols-3 gap-3">
         <label class="block mb-2">
-            <input type="checkbox" name="q1" value="1" class="mr-2"> Pay immediately
+            <input id="fq1" type="radio" name="q1" value="1" class="q1 mr-2"> Pay immediately
         </label>
         <label class="block mb-2">
-            <input type="checkbox" name="q1" value="2" class="mr-2"> Bargain for 4k
+            <input id="fq2" type="radio" name="q1" value="2" class="q1 mr-2"> Bargain for 4k
         </label>
         <label class="block mb-2">
-            <input type="checkbox" name="q1" value="3" class="mr-2"> Bargain for 2k
+            <input id="fq3" type="radio" name="q1" value="3" class="q1 mr-2"> Bargain for 2k
         </label>
         <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> 'Mumsy stop playing'
+            <input id="fq4" type="radio" name="q1" value="5" class="q1 mr-2"> 'Mumsy stop playing'
         </label>
         <label class="block mb-2">
-            <input type="checkbox" name="q1" value="4" class="mr-2"> Walk away
+            <input id="fq5" type="radio" name="q1" value="4" class="q1 mr-2"> Walk away
         </label>
         <label class="block mb-2">
-            <input type="checkbox" name="q1" value="5" class="mr-2"> Thief it
+            <input id="fq6" type="radio" name="q1" value="5" class="q1 mr-2"> Thief it
         </label>
     </div>
     </div>
@@ -43,22 +43,22 @@
                 <h3 class="font-bold text-[22px] mb-5">You just finished eating at a local restaurant in your area and you are thirsty AF. What do you do? 🤔</h3>
                 <div class="grid md:grid-cols-3 gap-3">
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="1" class="mr-2"> Wait until i get home to drink water
+                        <input id="sq1" type="radio" name="q1" value="1" class="q2 mr-2"> Wait until i get home to drink water
                     </label>
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="2" class="mr-2"> Order a bottle of water
+                        <input id="sq1" type="radio" name="q1" value="2" class="q2 mr-2"> Order a bottle of water
                     </label>
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="3" class="mr-2"> Order sachet water (pure water)
+                        <input id="sq1" type="radio" name="q1" value="3" class="q2 mr-2"> Order sachet water (pure water)
                     </label>
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="4" class="mr-2"> Drink the free water offered at the canteen
+                        <input id="sq1" type="radio" name="q1" value="4" class="q2 mr-2"> Drink the free water offered at the canteen
                     </label>
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="5" class="mr-2"> Swallow saliva and keep it moving
+                        <input id="sq1" type="radio" name="q1" value="5" class="q2 mr-2"> Swallow saliva and keep it moving
                     </label>
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="6" class="mr-2"> What is water?
+                        <input id="sq1" type="radio" name="q1" value="6" class="q2 mr-2"> What is water?
                     </label>
                 </div>
             </div>
@@ -68,22 +68,22 @@
                 <h3 class="font-bold text-[22px] mb-5">You are at a party and the multi-millionaires are making it rain, you have 2500 naira on you and you are sure you can 'codedly' pick thirteen 1000 naira notes from the ground. What do you do? 🤔</h3>
                 <div class="grid md:grid-cols-3 gap-3">
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="1" class="mr-2"> Pick 3 of the naira notes and lock up
+                        <input id="tq1" type="checkbox" name="q1" value="1" class="q3 mr-2"> Pick 3 of the naira notes and lock up
                     </label>
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="2" class="mr-2"> Finesse all the 13 notes and call it a day
+                        <input id="tq2"  type="checkbox" name="q1" value="2" class="q3 mr-2"> Finesse all the 13 notes and call it a day
                     </label>
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="3" class="mr-2"> Make sure my bag is full before leaving there
+                        <input id="tq3"  type="checkbox" name="q1" value="3" class="q3 mr-2"> Make sure my bag is full before leaving there
                     </label>
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="4" class="mr-2"> I don't need the money, I'm good with my 2500 naira
+                        <input id="tq4"  type="checkbox" name="q1" value="4" class="q3 mr-2"> I don't need the money, I'm good with my 2500 naira
                     </label>
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="5" class="mr-2"> I would make my 2500 naira rain
+                        <input  id="tq5"  type="checkbox" name="q1" value="5" class="q3 mr-2"> I would make my 2500 naira rain
                     </label>
                     <label class="font-bold text-base text-[#323232] block mb-2">
-                        <input type="checkbox" name="q1" value="6" class="mr-2"> Why is rain falling at the party?
+                        <input id="tq6"  type="checkbox" name="q1" value="6" class="q3 mr-2"> Why is rain falling at the party?
                     </label>
                 </div>
             </div>
@@ -155,7 +155,7 @@
                 </div>
 
 
-    <script>
+    <!-- <script>
         function calculateSteeze() {
             let score = 0;
             const questions = document.querySelectorAll('.question');
@@ -169,7 +169,7 @@
             document.getElementById('quiz').classList.add('hidden');
             document.getElementById('results').classList.remove('hidden');
         }
-    </script>
+    </script> -->
 
     <script src="index.js"></script>
 </body>
