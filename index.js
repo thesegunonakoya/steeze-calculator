@@ -1,112 +1,46 @@
-const firstQ = document.querySelectorAll(".q1");
-const secondQ = document.querySelectorAll(".q2");
-const thirdQ = document.querySelectorAll(".q3");
-const fourthQ = document.querySelectorAll(".q4");
-const fifthQ = document.querySelectorAll(".q5");
-const score = 100;
+const check = document.getElementById("steeze")
+
+
+let total = 100;
 let user = 0;
+let result;
+const first = ['A','A','A','A','A']
+const second = ['B','B','B','B','B']
+const third = ['C','C','C','C','C']
+const fourth = ['D','D','D','D','D']
+const fifth = ['E','E','E','E','E']
+const sixth = ['F','F','F','F','F']
 
 
-firstQ.forEach(item => {
-    item.addEventListener('change', function() {
-        let pick = this.id;
+check.addEventListener('submit',e =>{
+    const score = document.getElementById("score")
+    let logo = document.querySelector('#name').value.toLowerCase();
+    e.preventDefault()
+    const userAnswers = [check.q1.value,check.q2.value,check.q3.value,check.q4.value,check.q5.value]
 
-        switch(pick) {
-            case "fq1":
-                user = user + 10;
-                console.log(user);
-                break;
-            case "fq2":
-                user = user + 5;
-                console.log(user);
-                break;
-            case "fq3":
-                user = user + 2;
-                console.log(user);
-                break;
-            case "fq4":
-                user = user + 4;
-                console.log(user);
-                break;
-            case "fq5":
-                user = user + 1;
-                console.log(user);
-                break;
-            case "fq6":
-                user = user - 5;
-                console.log(user);
-                break;
-            
+    userAnswers.forEach((answer, index)=>{
+        if(answer === first[index]){
+            user += 10;
+        }else if(answer === second[index]){
+            user += 20
+        }else if(answer === third[index]){
+            user += 30
+        }else if(answer === fourth[index]){
+            user += 40
+        }else if(answer === fifth[index]){
+            user += 50
+        }else if(answer === sixth[index]){
+            user -= 20
         }
-    });
-});
+    })
 
+    if (user < 50){
+        score.textContent = `${logo}, see your score ${user} u dey fuck up o `
+    }else if (user > 50){
+        score.textContent = `${logo}, see your score ${user} u don over pass o`
+    }
+    console.log(logo);
+    console.log(user);
 
-secondQ.forEach(item2 => {
-    item2.addEventListener('change', function() {
-        let pick2 = this.id;
+})
 
-        switch(pick2) {
-            case "sq1":
-                user = user + 10;
-                console.log(user);
-                break;
-            case "sq2":
-                user = user + 5;
-                console.log(user);
-                break;
-            case "sq3":
-                user = user + 2;
-                console.log(user);
-                break;
-            case "sq4":
-                user = user + 4;
-                console.log(user);
-                break;
-            case "sq5":
-                user = user + 1;
-                console.log(user);
-                break;
-            case "sq6":
-                user = user - 5;
-                console.log(user);
-                break;
-            
-        }
-    });
-});
-
-
-thirdQ.forEach(item3 => {
-    item3.addEventListener('change', function() {
-        let pick2 = this.id;
-
-        switch(pick2) {
-            case "tq1":
-                user = user + 10;
-                console.log(user);
-                break;
-            case "tq2":
-                user = user + 5;
-                console.log(user);
-                break;
-            case "tq3":
-                user = user + 2;
-                console.log(user);
-                break;
-            case "tq4":
-                user = user + 4;
-                console.log(user);
-                break;
-            case "tq5":
-                user = user + 1;
-                console.log(user);
-                break;
-            case "tq6":
-                user = user - 5;
-                console.log(user);
-                break;
-            
-        }
-    });
-});
