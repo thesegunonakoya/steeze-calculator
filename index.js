@@ -1,9 +1,9 @@
 const check = document.getElementById("steeze");
 const refresh = document.getElementById('refresh');
 
-// Consolidated event listener for form submission and score calculation
+
 check.addEventListener('submit', e => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault();
 
     let user = 0;
     const score = document.getElementById("score");
@@ -16,11 +16,11 @@ check.addEventListener('submit', e => {
     const userAnswers = [check.q1.value, check.q2.value, check.q3.value, check.q4.value, check.q5.value];
 
     const first = ['B', 'C', 'A', 'A', 'A'];
-    const second = ['D', 'F', 'B', 'B', 'B'];  // 20 points each
-    const third = ['C', 'E', 'E', 'C', 'C'];   // 30 points each
-    const fourth = ['E', 'A', 'D', 'D', 'D'];  // 40 points each
-    const fifth = ['A', 'B', 'F', 'E', 'E'];   // 50 points each
-    const sixth = ['F', 'D', 'C', 'F', 'F'];   // -20 points each
+    const second = ['D', 'F', 'B', 'B', 'B']; 
+    const third = ['C', 'E', 'E', 'C', 'C'];   
+    const fourth = ['E', 'A', 'D', 'D', 'D'];  
+    const fifth = ['A', 'B', 'F', 'E', 'E'];   
+    const sixth = ['F', 'D', 'C', 'F', 'F'];   
 
     userAnswers.forEach((answer, index) => {
         if (answer === first[index]) {
