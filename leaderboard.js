@@ -21,3 +21,5 @@ fetch('https://steeze-api.vercel.app/api/leaderboard')
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
   });
+
+  

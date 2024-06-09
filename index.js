@@ -10,7 +10,6 @@ check.addEventListener('submit', async (e) => {
   const logoInput = document.getElementById('name');
   let logo = logoInput.value.trim();
 
-  // Clear error messages
   errorMessage.style.display = 'none';
   optionsErrorMessage.style.display = 'none';
 
@@ -58,7 +57,7 @@ check.addEventListener('submit', async (e) => {
     }
   });
 
-  // Display appropriate message based on user score
+
   if (user < 0) {
     score.textContent = `you this ${logo} or whatever they are calling you, you got ${user} out of 300, steeze saw you and left the country! you peasant! `;
     
