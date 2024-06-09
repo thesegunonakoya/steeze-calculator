@@ -21,34 +21,3 @@ body {
     margin: 0;
     font-family: 'TR Avalon', sans-serif;
 }
-.style{
-    font-size:20px;
-    font-weight:bolder;
-    color:#D52127;
-    font-style:italic;
-}
-.style2{
-    font-size:20px;
-    font-weight:bold;
-    color:#6C005F;
-    font-style:italic;
-}
-.style3{
-    font-size:20px;
-    font-weight:bold;
-    color:#FBB40F;
-    font-style:italic;
-}
-.style4{
-    font-size:20px;
-    font-weight:bold;
-    color:#322C72;
-    font-style:italic;
-}
-.style5{
-    font-size:20px;
-    font-weight:bold;
-    color:#2FBBB3;
-    font-style:italic;
-}
-

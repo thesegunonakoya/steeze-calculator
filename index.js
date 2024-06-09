@@ -1,20 +1,39 @@
 const check = document.getElementById("steeze");
 const refresh = document.getElementById('refresh');
+const scoreContainer = document.getElementById('score-container');
+const errorMessage = document.getElementById('error-message');
+const optionsErrorMessage = document.getElementById('qerror-message');
 
 check.addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  const logoInput = document.getElementById('name');
+  let logo = logoInput.value.trim().toUpperCase();
+
+  // Clear error messages
+  errorMessage.style.display = 'none';
+  optionsErrorMessage.style.display = 'none';
+
+  if (!logo) {
+    errorMessage.style.display = 'block';
+    scoreContainer.style.display = 'none';
+    window.scrollTo(0, 0);
+    logoInput.focus();
+    return;
+  }
+
+  const userAnswers = [check.q1.value, check.q2.value, check.q3.value, check.q4.value, check.q5.value];
+  if (userAnswers.some(answer => answer === "")) {
+    optionsErrorMessage.style.display = 'block';
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  scoreContainer.style.display = 'block';
   document.getElementById("refresh").textContent = "(Take another test)";
 
   let user = 0;
   const score = document.getElementById("score");
-  let logo = document.getElementById('name').value.trim().toUpperCase();
-
-  if (logo === "") {
-    logo = "unknown human being since you no wan put your name";
-  }
-
-  const userAnswers = [check.q1.value, check.q2.value, check.q3.value, check.q4.value, check.q5.value];
 
   const first = ['B', 'C', 'A', 'B', 'B'];
   const second = ['D', 'F', 'B', 'D', 'E'];
@@ -39,28 +58,31 @@ check.addEventListener('submit', async (e) => {
     }
   });
 
+  // Display appropriate message based on user score
   if (user < 0) {
     score.textContent = `you this ${logo} or whatever they are calling you, you got ${user} out of 250, steeze saw you and left the country! you peasant! `;
-    score.classList.add('style');
+    
   } else if (user > 0 && user <= 50) {
     score.textContent = `you this ${logo} or what are they calling you, you manage score ${user} out of 250, steeze see you for left pass right! god forbid!`;
-    score.classList.add('style2');
+    
   } else if (user > 50 && user <= 100) {
     score.textContent = `you this ${logo} or what is that your name again, you manage score ${user} out of 250, your steeze still dey really learn work and we dont like it!! `;
-    score.classList.add('style3');
+    
   } else if (user > 100 && user <= 150) {
     score.textContent = `you this ${logo} or what is that your name again, you got ${user} out of 250, you try but your steeze still dey gba, yeye dey smell, you can do better!`;
-    score.classList.add('style4');
+    
   } else if (user > 150 && user <= 200) {
     score.textContent = `you this ${logo}, agba! twale! you got ${user} out of 250, you dey represent small small, your steeze dey learn work sha!`;
-    score.classList.add('style4');
+    
   } else if (user > 200 && user <= 249) {
     score.textContent = `you this ${logo}, agba! 002! you got ${user} out of 250, your get steeze oo, but e con be like say e dey hide`;
-    score.classList.add('style4');
+    
   } else if (user === 250) {
     score.textContent = `you this ${logo} ehnnn, you got all ${user} out of 250, you are the agba of all steeze and we might need your autograph o! 20 meter for you! send your aza to wiz!`;
-    score.classList.add('style5');
+
   }
+
+  window.scrollTo(0, 0);
 
   try {
     const response = await fetch('https://steeze-api.vercel.app/api/submit-score', {
@@ -79,10 +101,13 @@ check.addEventListener('submit', async (e) => {
   check.reset();
 });
 
-refresh.addEventListener('click', async function() {
+refresh.addEventListener('click', () => {
   check.reset();
   document.getElementById("score").textContent = "Take the test to get a steeze score!";
   document.getElementById("score").className = '';
   document.getElementById("refresh").textContent = "";
+  errorMessage.style.display = 'none';
+  optionsErrorMessage.style.display = 'none';
+  scoreContainer.style.display = 'none';
   window.scrollTo(0, 0);
 });
