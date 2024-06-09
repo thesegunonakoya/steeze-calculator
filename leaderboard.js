@@ -13,8 +13,8 @@ fetch('https://steeze-api.vercel.app/api/leaderboard')
 
     top10.forEach(entry => {
       const entryP = document.createElement('p');
-      entryP.textContent = `${entry.name} got ${entry.score} of 250`;
-      entryP.className = 'text-sm mb-3 font-bold text-[#323232]';
+      entryP.textContent = `${entry.name} got ${entry.score} of 300`;
+      entryP.className = 'text-sm mb-3 font-bold text-red-500';
       leaderboardDiv.appendChild(entryP);
     });
   })

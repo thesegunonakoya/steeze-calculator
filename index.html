@@ -17,18 +17,43 @@
     <div class="text-[#0C0C0C] text-sm bg-white text-center font-bold pt-3 pb-3 px-8 border-b-[1px] border-[#0C0C0C]">
         Are you a certified steeze OG 😎 or just another regular peasant 💀? Lets find out! 🔥 </div>
 
-    <div class="flex flex-col md:flex-row md:mx-5 my-5 md:my-5">
+        <div id="captureDiv" class="py-3 md:px-5">
+            <div id="score-container" style="display: none;" class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+                <span class="font-bold text-[#0C0C0C] text-[18px]"><span id="score"></span> <br> <span id="refresh" class="text-red-500 cursor-pointer">[ Refresh ]</span> <button onclick="captureDiv()" id="screenshotButton" class="text-red-500">[ Take Screenshot ]</button> </span>
+                <div id="p-3"></div>
+            </div>
+        </div>
+        
+        <script>
+            function captureDiv() {
+                document.getElementById('screenshotButton').style.display = 'none';
+                
+                document.getElementById('refresh').style.display = 'none';
+                
+                document.getElementById('p-3').classList.add('p-3');
+        
+                html2canvas(document.getElementById('captureDiv')).then(function(canvas) {
+                    var link = document.createElement('a');
+                    link.download = 'steeze.png';
+                    link.href = canvas.toDataURL();
+                    link.click();
+                });
+            }
+        </script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+        
+        
+        
+        
+
+    <div class="flex flex-col md:flex-row md:mx-5 mb-5 md:mb-5">
         <main class="md:w-[70%]">
 
-            <div id="score-container" style="display: none;" class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                <span class="font-bold text-[#0C0C0C] text-[18px]"><span id="score"></span> <span id="refresh" class="cursor-pointer"></span> </span>
-            </div>
-
-            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C] text-red-600 font-semibold" id="error-message" style="display: none;">
+            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C] text-red-500 font-semibold" id="error-message" style="display: none;">
                 You need to enter a name! Godammit! You dont have eyes or??
               </div>
 
-              <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C] text-red-600 font-semibold" id="qerror-message" style="display: none;">
+              <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C] text-red-500 font-semibold" id="qerror-message" style="display: none;">
                 You need to answer all the questions! Do i still need to tell you this??
               </div>
 
@@ -206,37 +231,15 @@
         <aside class="md:w-[30%]">
 
             <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                <h3 class="font-bold text-[18px] mb-5">Spread the gospel 🥂</h3>
+                <h3 class="font-bold text-[18px] mb-5">Spread the word 😵</h3>
                 <p class="text-sm font-bold text-[#323232]">
-                    <a class="mr-3" href="whatsapp://send?text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20at%20https%3A%2F%2Fsteeze-calculator.vercel.app%20and%20show%20me%20your%20result%21" data-action="share/whatsapp/share" target="_blank" rel="noopener noreferrer">
-                    <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
-                        class="mb-2 inline-block rounded bg-[#128c7e] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
-                        <span class="[&>svg]:h-4 [&>svg]:w-10">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
-                                <path
-                                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-                            </svg>
-                        </span>
-                    </button>
+                    <a class="mr-3 text-red-500" href="whatsapp://send?text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20at%20https%3A%2F%2Fsteeze-calculator.vercel.app%20and%20show%20me%20your%20result%21" data-action="share/whatsapp/share" target="_blank" rel="noopener noreferrer">
+                    [ Share to WhatsApp ]
                     </a>
 
 
-                    <a href="https://twitter.com/intent/tweet?url=https://steeze-calculator.vercel.app&text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20and%20show%20me%20your%20result%21" target="_blank" rel="noopener noreferrer">
-                    <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
-                        class="mb-2 inline-block rounded bg-black px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
-                        <span class="[&>svg]:h-4 [&>svg]:w-10">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path
-                                        d="M3.50003 4.50005C1.50012 7.99982 2.63692 13.738 7.63684 16.2382C6.52918 17.0001 4.50012 17.9999 2.50012 18.4998C7.00012 20.4999 11.5001 20.9999 16.0001 17.4999C19.4154 14.8436 20.1668 10.1666 20.0001 7.99991L22.5001 5.00023H19.0001C17.5001 3.49991 16.022 3.57155 14.5001 4.00017C12.724 4.50037 11.7934 6.34309 12.0001 8.49991C9.00012 8.99968 6.00012 6.99982 3.50003 4.50005Z"
-                                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    </path>
-                                </g>
-                            </svg>
-                        </span>
-                    </button>
+                    <a class="text-red-500" href="https://twitter.com/intent/tweet?url=https://steeze-calculator.vercel.app&text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20and%20show%20me%20your%20result%21" target="_blank" rel="noopener noreferrer">
+                    [ Share to Twitter ]
                     </a>
 
                 </p>
@@ -249,7 +252,7 @@
                     create a web app related to one of the most overused slangs in our cohort "steeze".</p>
                 <p class="text-sm mb-5 font-bold text-[#323232] leading-6">In case you didnt know before now, steeze is
                     straight up easy flow and mad unique style, confidence and skill expressed via actions that knock
-                    people back in awe and amazement. you either got it or you don't. You can't force steeze!</p>
+                    people back in awe and amazement. you either got it or you don't. <span class="text-red-500">You can't force steeze!</span></p>
                 <p class="text-sm mb-3 font-bold text-[#323232] leading-6">Share with your friends, have fun with our
                     steeze calculator and break a leg! </p>
             </div>
@@ -257,9 +260,9 @@
 
             <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
                 <h3 class="font-bold text-[18px] mb-5">Contributors 💻</h3>
-                <p class="text-sm mb-5 font-bold text-[#323232]"><a href="http://https://github.com/thesegunonakoya">Oluwasegun Onakoya</a></p>
-                <p class="text-sm mb-5 font-bold text-[#323232]"><a href="http://https://github.com/faahvor">Favour Ifurukpe</a></p>
-                <p class="text-sm mb-3 font-bold text-[#323232]"><a href="http://https://github.com/tobi4u">Olayinka Balogun</a></p>
+                <p class="text-sm mb-5 font-bold text-red-500"><a href="http://https://github.com/thesegunonakoya">Oluwasegun Onakoya</a></p>
+                <p class="text-sm mb-5 font-bold text-red-500"><a href="http://https://github.com/faahvor">Favour Ifurukpe</a></p>
+                <p class="text-sm mb-3 font-bold text-red-500"><a href="http://https://github.com/tobi4u">Olayinka Balogun</a></p>
             </div>
 
             <ul id="leaderboard">
@@ -267,8 +270,8 @@
               </ul>
               
             <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                <h3 class="font-bold text-[18px] mb-5">Steeze hall of fame 🦅</h3>
-                <p class="text-sm mb-3 font-bold text-[#323232]"><p id="hallOfFame"></p>
+                <h3 class="font-bold text-[18px] mb-5">Hall of fame ☄️</h3>
+                <p class="text-sm mb-3 font-bold text-red-500"><p class="text-red-500" id="hallOfFame"></p>
                 </p>
                 </div>
 
