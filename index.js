@@ -1,8 +1,7 @@
 const check = document.getElementById("steeze");
 const refresh = document.getElementById('refresh');
 
-
-check.addEventListener('submit', e => {
+check.addEventListener('submit', async e => {
     e.preventDefault();
 
     document.getElementById("refresh").textContent = "(Take another test)";
@@ -63,6 +62,9 @@ check.addEventListener('submit', e => {
         score.classList.add('style5');
     }
 
+    await saveResult(logo, user);
+    await getLeaderboard();
+
     check.reset();
 });
 
@@ -73,3 +75,36 @@ refresh.addEventListener('click', function() {
     document.getElementById("refresh").textContent = "";
     window.scrollTo(0, 0);
 });
+
+async function saveResult(name, score) {
+    const response = await fetch('https://steeze-backend.vercel.app/api/saveResult', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, score }),
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+        alert('Result saved successfully');
+    } else {
+        alert(`Error: ${data.error}`);
+    }
+}
+
+async function getLeaderboard() {
+    const response = await fetch('https://steeze-backend.vercel.app/api/getLeaderboard');
+    const leaderboard = await response.json();
+
+    const leaderboardElement = document.getElementById('leaderboard');
+    leaderboardElement.innerHTML = '';
+
+    leaderboard.forEach((entry, index) => {
+        const entryElement = document.createElement('div');
+        entryElement.textContent = `${index + 1}. ${entry.name} - ${entry.score}`;
+        leaderboardElement.appendChild(entryElement);
+    });
+}
+
+window.addEventListener('load', getLeaderboard);
