@@ -17,45 +17,50 @@
     <div class="text-[#0C0C0C] text-sm bg-white text-center font-bold pt-3 pb-3 px-8 border-b-[1px] border-[#0C0C0C]">
         Are you a certified steeze OG 😎 or just another regular peasant 💀? Lets find out! 🔥 </div>
 
-        <div id="captureDiv" class="py-3 md:px-5">
-            <div id="score-container" style="display: none;" class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                <span class="font-bold text-[#0C0C0C] text-[18px]"><span id="score"></span> <br> <span id="refresh" class="text-red-500 cursor-pointer">[ Refresh ]</span> <button onclick="captureDiv()" id="screenshotButton" class="text-red-500">[ Take Screenshot ]</button> </span>
-                <div id="p-3"></div>
-            </div>
+    <div id="captureDiv" class="py-3 md:px-5">
+        <div id="score-container" style="display: none;"
+            class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+            <span class="font-bold text-[#0C0C0C] text-[18px]"><span id="score"></span> <br> <span id="refresh"
+                    class="text-red-500 cursor-pointer">[ Refresh ]</span> <button onclick="captureDiv()"
+                    id="screenshotButton" class="text-red-500">[ Take Screenshot ]</button> </span>
+            <div id="p-3"></div>
         </div>
-        
-        <script>
-            function captureDiv() {
-                document.getElementById('screenshotButton').style.display = 'none';
-                
-                document.getElementById('refresh').style.display = 'none';
-                
-                document.getElementById('p-3').classList.add('p-3');
-        
-                html2canvas(document.getElementById('captureDiv')).then(function(canvas) {
-                    var link = document.createElement('a');
-                    link.download = 'steeze.png';
-                    link.href = canvas.toDataURL();
-                    link.click();
-                });
-            }
-        </script>
-        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-        
-        
-        
-        
+    </div>
+
+    <script>
+        function captureDiv() {
+            document.getElementById('screenshotButton').style.display = 'none';
+
+            document.getElementById('refresh').style.display = 'none';
+
+            document.getElementById('p-3').classList.add('p-3');
+
+            html2canvas(document.getElementById('captureDiv')).then(function (canvas) {
+                var link = document.createElement('a');
+                link.download = 'steeze.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        }
+    </script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+
+
+
 
     <div class="flex flex-col md:flex-row md:mx-5 mb-5 md:mb-5">
         <main class="md:w-[70%]">
 
-            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C] text-red-500 font-semibold" id="error-message" style="display: none;">
+            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C] text-red-500 font-semibold"
+                id="error-message" style="display: none;">
                 You need to enter a name! Godammit! You dont have eyes or??
-              </div>
+            </div>
 
-              <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C] text-red-500 font-semibold" id="qerror-message" style="display: none;">
+            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C] text-red-500 font-semibold"
+                id="qerror-message" style="display: none;">
                 You need to answer all the questions! Do i still need to tell you this??
-              </div>
+            </div>
 
             <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
                 <h3 class="font-bold text-[18px] mb-5">What does your crush calls you? 🤔</h3>
@@ -233,13 +238,17 @@
             <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
                 <h3 class="font-bold text-[18px] mb-5">Spread the word 😵</h3>
                 <p class="text-sm font-bold text-[#323232]">
-                    <a class="mr-3 text-red-500" href="whatsapp://send?text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20at%20https%3A%2F%2Fsteeze-calculator.vercel.app%20and%20show%20me%20your%20result%21" data-action="share/whatsapp/share" target="_blank" rel="noopener noreferrer">
-                    [ Share to WhatsApp ]
+                    <a class="mr-3 text-red-500"
+                        href="whatsapp://send?text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20at%20https%3A%2F%2Fsteeze-calculator.vercel.app%20and%20show%20me%20your%20result%21"
+                        data-action="share/whatsapp/share" target="_blank" rel="noopener noreferrer">
+                        [ Share to WhatsApp ]
                     </a>
 
 
-                    <a class="text-red-500" href="https://twitter.com/intent/tweet?url=https://steeze-calculator.vercel.app&text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20and%20show%20me%20your%20result%21" target="_blank" rel="noopener noreferrer">
-                    [ Share to Twitter ]
+                    <a class="text-red-500"
+                        href="https://twitter.com/intent/tweet?url=https://steeze-calculator.vercel.app&text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20and%20show%20me%20your%20result%21"
+                        target="_blank" rel="noopener noreferrer">
+                        [ Share to Twitter ]
                     </a>
 
                 </p>
@@ -252,7 +261,8 @@
                     create a web app related to one of the most overused slangs in our cohort "steeze".</p>
                 <p class="text-sm mb-5 font-bold text-[#323232] leading-6">In case you didnt know before now, steeze is
                     straight up easy flow and mad unique style, confidence and skill expressed via actions that knock
-                    people back in awe and amazement. you either got it or you don't. <span class="text-red-500">You can't force steeze!</span></p>
+                    people back in awe and amazement. you either got it or you don't. <span class="text-red-500">You
+                        can't force steeze!</span></p>
                 <p class="text-sm mb-3 font-bold text-[#323232] leading-6">Share with your friends, have fun with our
                     steeze calculator and break a leg! </p>
             </div>
@@ -260,20 +270,24 @@
 
             <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
                 <h3 class="font-bold text-[18px] mb-5">Contributors 💻</h3>
-                <p class="text-sm mb-5 font-bold text-red-500"><a href="http://https://github.com/thesegunonakoya">Oluwasegun Onakoya</a></p>
-                <p class="text-sm mb-5 font-bold text-red-500"><a href="http://https://github.com/faahvor">Favour Ifurukpe</a></p>
-                <p class="text-sm mb-3 font-bold text-red-500"><a href="http://https://github.com/tobi4u">Olayinka Balogun</a></p>
+                <p class="text-sm mb-5 font-bold text-red-500"><a
+                        href="http://https://github.com/thesegunonakoya">Oluwasegun Onakoya</a></p>
+                <p class="text-sm mb-5 font-bold text-red-500"><a href="http://https://github.com/faahvor">Favour
+                        Ifurukpe</a></p>
+                <p class="text-sm mb-3 font-bold text-red-500"><a href="http://https://github.com/tobi4u">Olayinka
+                        Balogun</a></p>
             </div>
 
             <ul id="leaderboard">
                 <!-- Leaderboard items will be dynamically added here -->
-              </ul>
-              
+            </ul>
+
             <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
                 <h3 class="font-bold text-[18px] mb-5">Hall of fame ☄️</h3>
-                <p class="text-sm mb-3 font-bold text-red-500"><p class="text-red-500" id="hallOfFame"></p>
+                <p class="text-sm mb-3 font-bold text-red-500">
+                <p class="text-red-500" id="hallOfFame"></p>
                 </p>
-                </div>
+            </div>
 
         </aside>
 
