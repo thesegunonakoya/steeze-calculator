@@ -7,6 +7,8 @@ const optionsErrorMessage = document.getElementById('qerror-message');
 check.addEventListener('submit', async (e) => {
   e.preventDefault();
 
+  document.getElementById('freshNotice').style.display = 'none';
+
   const logoInput = document.getElementById('name');
   let logo = logoInput.value.trim();
 
@@ -29,7 +31,7 @@ check.addEventListener('submit', async (e) => {
   }
 
   scoreContainer.style.display = 'block';
-  document.getElementById("refresh").textContent = "[ Take another test ]";
+  document.getElementById("refresh").textContent = "Test Again";
 
   let user = 0;
   const score = document.getElementById("score");

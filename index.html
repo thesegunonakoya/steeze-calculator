@@ -12,28 +12,38 @@
     <script src="leaderboard.js"></script>
 </head>
 
-<body class="text-[#0C0C0C] bg-gray-200">
-    <h1 class="bg-[#0C0C0C] text-2xl text-center font-bold py-4 text-white px-4">The Steeze Calculator 🌊</h1>
-    <div class="text-[#0C0C0C] text-sm bg-white text-center font-bold pt-3 pb-3 px-8 border-b-[1px] border-[#0C0C0C]">
+<body class="text-[#0C0C0C] bg-[#ffffff]">
+    <h1 class="bg-[#b32c1a] text-2xl text-center font-bold py-4 text-white px-4">The Steeze Calculator 🌊</h1>
+    <div class="text-[#0C0C0C] text-sm bg-[#f8f8f8] text-center font-bold pt-3 pb-3 px-8 border-b-[1px] border-[#b32c1a]">
         Are you a certified steeze OG 😎 or just another regular peasant 💀? Lets find out! 🔥 </div>
 
     <div id="captureDiv" class="py-3 md:px-5">
         <div id="score-container" style="display: none;"
-            class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-            <span class="font-bold text-[#0C0C0C] text-[18px]"><span id="score"></span> <br> <span id="refresh"
-                    class="text-red-500 cursor-pointer">[ Refresh ]</span> <button onclick="captureDiv()"
-                    id="screenshotButton" class="text-red-500">[ Take Screenshot ]</button> </span>
+            class="text-center items-center rounded-lg bg-[#b32c1a] p-6 m-3 border-[1px] border-[#b32c1a]">
+            <span class="text-sm font-bold text-white text-[18px]"><span id="score"></span> <br> <div class="text-center space-x-1"><button id="refresh"
+                    class="mt-2 mb-2 text-[#b32c1a] bg-white rounded-lg px-3 py-2 cursor-pointer">Refresh</button> <button onclick="captureDiv()"
+                    id="screenshotButton" class="mt-2 mb-2 text-[#b32c1a] bg-white rounded-lg px-3 py-2">Screenshot</button></div> </span>
             <div id="p-3"></div>
         </div>
     </div>
 
+    
     <script>
         function captureDiv() {
             document.getElementById('screenshotButton').style.display = 'none';
 
             document.getElementById('refresh').style.display = 'none';
 
+            setTimeout(function() {
+                document.getElementById('refresh').style.display = 'inline';
+                document.getElementById('screenshotButton').style.display = 'inline';
+            }, 1000);
+
             document.getElementById('p-3').classList.add('p-3');
+
+            setTimeout(function() {
+                document.getElementById('p-3').classList.remove('p-3');
+            }, 1000);
 
             html2canvas(document.getElementById('captureDiv')).then(function (canvas) {
                 var link = document.createElement('a');
@@ -52,28 +62,32 @@
     <div class="flex flex-col md:flex-row md:mx-5 mb-5 md:mb-5">
         <main class="md:w-[70%]">
 
-            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C] text-red-500 font-semibold"
-                id="error-message" style="display: none;">
-                You need to enter a name! Godammit! You dont have eyes or??
+            <div class="text-sm text-center rounded-lg bg-[#b32c1a] p-6 m-3 border-[1px] border-[#b32c1a] text-white font-semibold"
+                id="freshNotice">
+                Pick an option for each scenerio below as fast as you can for a more accurate score! Don't overthink it!
             </div>
 
-            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C] text-red-500 font-semibold"
+            <div class="text-sm text-center rounded-lg bg-[#b32c1a] p-6 m-3 border-[1px] border-[#b32c1a] text-white font-semibold"
+                id="error-message" style="display: none;">
+                You need to enter a name! You dont have eyes or??
+            </div>
+
+            <div class="text-sm text-center rounded-lg bg-[#b32c1a] p-6 m-3 border-[1px] border-[#b32c1a] text-white font-semibold"
                 id="qerror-message" style="display: none;">
                 You need to answer all the questions! Do i still need to tell you this??
             </div>
 
-            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                <h3 class="font-bold text-[18px] mb-5">What does your crush calls you? 🤔</h3>
+            <div class="rounded-lg bg-[#f8f8f8] p-6 m-3 border-[1px] border-[#b32c1a]">
+                <h3 class="font-bold text-[#b32c1a] text-[18px] mb-5">What does your crush calls you? 🤔 <span class="text-xs">(Yes, we need to know!)</span></h3>
                 <div class="full-width w-full">
-                    <input id="name" type="input" name="title"
-                        placeholder="Werey, Nnamdi Importer Exporter, Turkey 2 Kilo or My Favourite Bush Meat"
-                        class="w-full text-sm font-bold border-[1px] border-[#0C0C0C] p-3 rounded-lg">
+
+                    <input id="name" type="input" name="title" value="Stupid fool" class="w-full text-sm font-bold border-[1px] text-[#323232] border-[#b32c1a] p-3 rounded-lg" style="background-color: #fff;">
                 </div>
             </div>
 
             <form action="" id="steeze">
-                <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                    <h3 class="font-bold text-[18px] mb-5">You are at the market buying plantains. The market woman says
+                <div class="rounded-lg bg-[#f8f8f8] p-6 m-3 border-[1px] border-[#b32c1a]">
+                    <h3 class="font-bold text-[#b32c1a] text-[18px] mb-5">You are at the market buying plantains. The market woman says
                         a bunch of 3 plantains costs 5k. What do you do? 🤔</h3>
                     <div class="grid md:grid-cols-3 gap-3">
                         <label class="font-bold text-sm text-[#323232] block mb-2">
@@ -98,8 +112,8 @@
                 </div>
 
 
-                <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                    <h3 class="font-bold text-[18px] mb-5">You just finished eating at a local restaurant in your area
+                <div class="rounded-lg bg-[#f8f8f8] p-6 m-3 border-[1px] border-[#b32c1a]">
+                    <h3 class="font-bold text-[#b32c1a] text-[18px] mb-5">You just finished eating at a local restaurant in your area
                         and you are thirsty AF. What do you do? 🤔</h3>
                     <div class="grid md:grid-cols-3 gap-3">
                         <label class="font-bold text-sm text-[#323232] block mb-2">
@@ -128,8 +142,8 @@
                 </div>
 
 
-                <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                    <h3 class="font-bold text-[18px] mb-5">You are at a party and the multi-millionaires are making it
+                <div class="rounded-lg bg-[#f8f8f8] p-6 m-3 border-[1px] border-[#b32c1a]">
+                    <h3 class="font-bold text-[#b32c1a] text-[18px] mb-5">You are at a party and the multi-millionaires are making it
                         rain, you have 2500 naira on you and you are sure you can 'codedly' pick thirteen 1000 naira
                         notes from the ground. What do you do? 🤔</h3>
                     <div class="grid md:grid-cols-3 gap-3">
@@ -161,8 +175,8 @@
                 </div>
 
 
-                <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                    <h3 class="font-bold text-[18px] mb-5">You are suddenly being approached, challenged and questioned
+                <div class="rounded-lg bg-[#f8f8f8] p-6 m-3 border-[1px] border-[#b32c1a]">
+                    <h3 class="font-bold text-[#b32c1a] text-[18px] mb-5">You are suddenly being approached, challenged and questioned
                         by a mad person in a crowded market. What do you do? 🤔</h3>
                     <div class="grid md:grid-cols-3 gap-3">
                         <label class="font-bold text-sm text-[#323232] block mb-2">
@@ -193,8 +207,8 @@
                 </div>
 
 
-                <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                    <h3 class="font-bold text-[18px] mb-5">You tripped and fell in public, you can feel you are possibly
+                <div class="rounded-lg bg-[#f8f8f8] p-6 m-3 border-[1px] border-[#b32c1a]">
+                    <h3 class="font-bold text-[#b32c1a] text-[18px] mb-5">You tripped and fell in public, you can feel you are possibly
                         injured. What do you do? 🤔</h3>
                     <div class="grid md:grid-cols-3 gap-3">
                         <label class="font-bold text-sm text-[#323232] block mb-2">
@@ -224,9 +238,9 @@
 
 
 
-                <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+                <div class="rounded-lg bg-[#f8f8f8] p-6 m-3 border-[1px] border-[#b32c1a]">
                     <button id="check"
-                        class="rounded-lg font-bold text-white px-7 py-4 bg-[#0C0C0C] hover:bg-red-700">Get Your Steeze
+                        class="rounded-lg font-bold text-white px-7 py-4 bg-[#b32c1a] hover:bg-[#323232]">Get Your Steeze
                         Score</button>
                 </div>
             </form>
@@ -237,46 +251,37 @@
 
         <aside class="md:w-[30%]">
 
-            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                <h3 class="font-bold text-[18px] mb-5">Spread the word 😵</h3>
+            <div class="rounded-lg bg-[#f8f8f8] p-6 m-3 border-[1px] border-[#b32c1a]">
+                <h3 class="font-bold text-[#b32c1a] text-[18px] mb-5">Spread the word ⚡</h3>
                 <p class="text-sm font-bold text-[#323232]">
-                    <a class="mr-3 text-red-500"
-                        href="whatsapp://send?text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20at%20https%3A%2F%2Fsteeze-calculator.vercel.app%20and%20show%20me%20your%20result%21"
-                        data-action="share/whatsapp/share" target="_blank" rel="noopener noreferrer">
-                        [ Share to WhatsApp ]
-                    </a>
-
-
-                    <a class="text-red-500"
-                        href="https://twitter.com/intent/tweet?url=https://steeze-calculator.vercel.app&text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20and%20show%20me%20your%20result%21"
-                        target="_blank" rel="noopener noreferrer">
-                        [ Share to Twitter ]
-                    </a>
-
+                    <div class="space-x-1">
+                        <a href="whatsapp://send?text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20at%20https%3A%2F%2Fsteeze-calculator.vercel.app%20and%20show%20me%20your%20result%21" data-action="share/whatsapp/share" target="_blank" rel="noopener noreferrer" class="mb-2 text-xs font-semibold text-white bg-[#b32c1a] rounded-lg px-3 py-2">Share to WhatsApp</a> 
+                        <a href="https://twitter.com/intent/tweet?url=https://steeze-calculator.vercel.app&text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20and%20show%20me%20your%20result%21" target="_blank" rel="noopener noreferrer" class="mb-2 text-xs font-semibold text-white bg-[#b32c1a] rounded-lg px-3 py-2">Share to Twitter</a>
+                    </div>
                 </p>
             </div>
 
 
-            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                <h3 class="font-bold text-[18px] mb-5">Our little play project ✨</h3>
+            <div class="rounded-lg bg-[#f8f8f8] p-6 m-3 border-[1px] border-[#b32c1a]">
+                <h3 class="font-bold text-[#b32c1a] text-[18px] mb-5">Our play project 🎈</h3>
                 <p class="text-sm mb-5 font-bold text-[#323232] leading-6">Out of nowhere, we came up with an idea to
                     create a web app related to one of the most overused slangs in our cohort "steeze".</p>
                 <p class="text-sm mb-5 font-bold text-[#323232] leading-6">In case you didnt know before now, steeze is
                     straight up easy flow and mad unique style, confidence and skill expressed via actions that knock
-                    people back in awe and amazement. you either got it or you don't. <span class="text-red-500">You
+                    people back in awe and amazement. you either got it or you don't. <span class="text-[#b32c1a]">You
                         can't force steeze!</span></p>
                 <p class="text-sm mb-3 font-bold text-[#323232] leading-6">Share with your friends, have fun with our
                     steeze calculator and break a leg! </p>
             </div>
 
 
-            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
-                <h3 class="font-bold text-[18px] mb-5">Contributors 💻</h3>
-                <p class="text-sm mb-5 font-bold text-red-500"><a
+            <div class="rounded-lg bg-[#f8f8f8] p-6 m-3 border-[1px] border-[#b32c1a]">
+                <h3 class="font-bold text-[#b32c1a] text-[18px] mb-5">Contributors 🥂</h3>
+                <p class="text-sm mb-5 font-bold text-[#b32c1a]"><a
                         href="http://https://github.com/thesegunonakoya">Oluwasegun Onakoya</a></p>
-                <p class="text-sm mb-5 font-bold text-red-500"><a href="http://https://github.com/faahvor">Favour
+                <p class="text-sm mb-5 font-bold text-[#b32c1a]"><a href="http://https://github.com/faahvor">Favour
                         Ifurukpe</a></p>
-                <p class="text-sm mb-3 font-bold text-red-500"><a href="http://https://github.com/tobi4u">Olayinka
+                <p class="text-sm mb-3 font-bold text-[#b32c1a]"><a href="http://https://github.com/tobi4u">Olayinka
                         Balogun</a></p>
             </div>
 
@@ -284,10 +289,10 @@
                 <!-- Leaderboard items will be dynamically added here -->
             </ul>
 
-            <div class="rounded-lg bg-white p-6 m-3 border-[1px] border-[#0C0C0C]">
+            <div class="rounded-lg bg-[#f8f8f8] p-6 m-3 border-[1px] border-[#b32c1a]">
                 <h3 class="font-bold text-[18px] mb-5">Hall of fame ☄️</h3>
-                <p class="text-sm mb-3 font-bold text-red-500">
-                <p class="text-red-500" id="hallOfFame"></p>
+                <p class="text-sm mb-3 font-bold text-[#b32c1a]">
+                <p class="text-[#b32c1a]" id="hallOfFame"></p>
                 </p>
             </div>
 
