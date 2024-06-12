@@ -45,17 +45,17 @@ check.addEventListener('submit', async (e) => {
 
   userAnswers.forEach((answer, index) => {
     if (answer === first[index]) {
-      user += 10;
+      user += 2;
     } else if (answer === second[index]) {
-      user += 20;
+      user += 5;
     } else if (answer === third[index]) {
-      user += 30;
+      user += 10;
     } else if (answer === fourth[index]) {
-      user += 40;
+      user += 13;
     } else if (answer === fifth[index]) {
-      user += 50;
+      user += 16;
     } else if (answer === sixth[index]) {
-      user -= 20;
+      user += 19;
     }
   });
 
