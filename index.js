@@ -36,12 +36,12 @@ check.addEventListener('submit', async (e) => {
   let user = 0;
   const score = document.getElementById("score");
 
-  const first = ['B', 'C', 'A', 'B', 'B'];
-  const second = ['D', 'F', 'B', 'D', 'E'];
-  const third = ['C', 'E', 'E', 'E', 'C'];
-  const fourth = ['E', 'A', 'D', 'F', 'F'];
-  const fifth = ['A', 'B', 'F', 'C', 'D'];
-  const sixth = ['F', 'D', 'C', 'A', 'A'];
+  const first = ['A', 'C', 'D', 'B', 'B'];
+  const second = ['C', 'F', 'B', 'D', 'E'];
+  const third = ['B', 'E', 'F', 'E', 'C'];
+  const fourth = ['E', 'A', 'C', 'F', 'F'];
+  const fifth = ['F', 'B', 'A', 'C', 'D'];
+  const sixth = ['D', 'D', 'E', 'A', 'A'];
 
   userAnswers.forEach((answer, index) => {
     if (answer === first[index]) {
