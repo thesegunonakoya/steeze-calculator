@@ -1,4 +1,4 @@
-fetch('https://steeze-api.vercel.app/api/leaderboard')
+fetch('https://api.steezecalculator.com/api/leaderboard')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok ' + response.statusText);

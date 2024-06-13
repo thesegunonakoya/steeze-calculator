@@ -87,7 +87,7 @@ check.addEventListener('submit', async (e) => {
 
   try {
     if (user >= 200) { 
-      const response = await fetch('https://steeze-api.vercel.app/api/submit-score', {
+      const response = await fetch('https://api.steezecalculator.com/api/submit-score', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
