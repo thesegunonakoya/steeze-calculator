@@ -79,7 +79,7 @@ check.addEventListener('submit', async (e) => {
     score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, You have steeze, but it's like it's playing hide and seek, like a ghost in broad daylight — your steeze is shy, hiding in plain sight! </h3> `;
     
   } else if (user === 90 && user >= 90) {
-    score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, You're the agba of all steeze! We might need your autograph soon, o! 20 meter for you! But first, try to get at least 100!</h3> `;
+    score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, You're the agba of all steeze! We might need your autograph soon o!</h3> `;
 
   }
 
