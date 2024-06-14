@@ -36,50 +36,50 @@ check.addEventListener('submit', async (e) => {
   let user = 0;
   const score = document.getElementById("score");
 
-  const first = ['A', 'C', 'D', 'B', 'B'];
-  const second = ['C', 'F', 'B', 'D', 'E'];
-  const third = ['B', 'E', 'F', 'E', 'C'];
-  const fourth = ['E', 'A', 'C', 'F', 'F'];
-  const fifth = ['F', 'B', 'A', 'C', 'D'];
-  const sixth = ['D', 'D', 'E', 'A', 'A'];
+  const first = ['A', 'B', 'F', 'C', 'D'];
+  const second = ['E', 'E', 'A', 'F', 'C'];
+  const third = ['B', 'A', 'E', 'E', 'F'];
+  const fourth = ['D', 'F', 'D', 'B', 'E'];
+  const fifth = ['F', 'C', 'B', 'D', 'B'];
+  const sixth = ['C', 'D', 'C', 'A', 'A'];
 
   userAnswers.forEach((answer, index) => {
     if (answer === first[index]) {
-      user += 2;
+      user += 18;
     } else if (answer === second[index]) {
-      user += 5;
-    } else if (answer === third[index]) {
-      user += 10;
-    } else if (answer === fourth[index]) {
       user += 13;
+    } else if (answer === third[index]) {
+      user += 7;
+    } else if (answer === fourth[index]) {
+      user += 4;
     } else if (answer === fifth[index]) {
-      user += 16;
+      user += 1;
     } else if (answer === sixth[index]) {
-      user += 19;
+      user -= 10;
     }
   });
 
 
   if (user < 0) {
-    score.textContent = `you this ${logo} or whatever they are calling you, you got ${user} out of 300, steeze saw you and left the country! you peasant! `;
+    score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, Steeze saw your score, shook its head in disbelief, gave up on life, and booked the next flight out of Nigeria! You peasant!</h3> `;
     
   } else if (user > 0 && user <= 50) {
-    score.textContent = `you this ${logo} or what are they calling you, you manage score ${user} out of 300, steeze see you for left pass right! god forbid!`;
+    score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, Steeze took one look at you and decided to retire! You need more than steeze, my friend; you need a miracle!</h3> `;
     
   } else if (user > 50 && user <= 100) {
-    score.textContent = `you this ${logo} or what is that your name again, you manage score ${user} out of 300, your steeze still dey really learn work and we dont like it!! `;
+    score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, Your steeze is like trying to drive a danfo without knowing the route — lost and confused! It needs a GPS and a prayer to find its way!</h3> `;
     
   } else if (user > 100 && user <= 150) {
-    score.textContent = `you this ${logo} or what is that your name again, you got ${user} out of 300, you try but your steeze still dey gba, yeye dey smell, you can do better!`;
+    score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, You try, but your steeze is still struggling, it's like a faulty generator — loud and inefficient. Time for an upgrade! </h3> `;
     
   } else if (user > 150 && user <= 200) {
-    score.textContent = `you this ${logo}, agba! twale! you got ${user} out of 300, you dey represent small small, your steeze dey learn work sha!`;
+    score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, You dey try small small, but your steeze dey learn work sha! E be like say e need extra lessons for steeze school! Send in your jamb score ASAP!</h3> `;
     
   } else if (user > 200 && user <= 249) {
-    score.textContent = `you this ${logo}, agba! 002! you got ${user} out of 300, your get steeze oo, but e con be like say e dey hide`;
+    score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, You have steeze, but it's like it's playing hide and seek, like a ghost in broad daylight — your steeze is shy, hiding in plain sight! </h3> `;
     
   } else if (user === 250) {
-    score.textContent = `you this ${logo} ehnnn, you got all ${user} out of 300, you are the agba of all steeze and we might need your autograph o! 20 meter for you! but first try get 300 at least!`;
+    score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, You're the agba of all steeze! We might need your autograph soon, o! 20 meter for you! But first, try to get at least 100!</h3> `;
 
   }
 
