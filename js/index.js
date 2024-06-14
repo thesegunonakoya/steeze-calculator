@@ -63,22 +63,22 @@ check.addEventListener('submit', async (e) => {
   if (user < 0) {
     score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, Steeze saw your score, shook its head in disbelief, gave up on life, and booked the next flight out of Nigeria! You peasant!</h3> `;
     
-  } else if (user > 0 && user <= 50) {
+  } else if (user > 0 && user <= 29) {
     score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, Steeze took one look at you and decided to retire! You need more than steeze, my friend; you need a miracle!</h3> `;
     
-  } else if (user > 50 && user <= 100) {
+  } else if (user > 30 && user <= 49) {
     score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, Your steeze is like trying to drive a danfo without knowing the route — lost and confused! It needs a GPS and a prayer to find its way!</h3> `;
     
-  } else if (user > 100 && user <= 150) {
+  } else if (user > 50 && user <= 69) {
     score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, You try, but your steeze is still struggling, it's like a faulty generator — loud and inefficient. Time for an upgrade! </h3> `;
     
-  } else if (user > 150 && user <= 200) {
+  } else if (user > 70 && user <= 79) {
     score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, You dey try small small, but your steeze dey learn work sha! E be like say e need extra lessons for steeze school! Send in your jamb score ASAP!</h3> `;
     
-  } else if (user > 200 && user <= 249) {
+  } else if (user > 80 && user <= 89) {
     score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, You have steeze, but it's like it's playing hide and seek, like a ghost in broad daylight — your steeze is shy, hiding in plain sight! </h3> `;
     
-  } else if (user === 250) {
+  } else if (user === 90 && user >= 90) {
     score.innerHTML = `<h2 class="text-xl">You scored ${user} out of 100!</h2> <h3 class="text-base mt-3">${logo}, You're the agba of all steeze! We might need your autograph soon, o! 20 meter for you! But first, try to get at least 100!</h3> `;
 
   }
@@ -86,7 +86,7 @@ check.addEventListener('submit', async (e) => {
   window.scrollTo(0, 0);
 
   try {
-    if (user >= 200) { 
+    if (user >= 80 ) { 
       const response = await fetch('https://api.steezecalculator.com/api/submit-score', {
         method: 'POST',
         headers: {
