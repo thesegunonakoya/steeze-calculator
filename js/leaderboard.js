@@ -13,7 +13,7 @@ fetch('https://api.steezecalculator.com/api/leaderboard')
 
     top10.forEach(entry => {
       const entryP = document.createElement('p');
-      entryP.textContent = `${entry.name} got ${entry.score} of 300`;
+      entryP.textContent = `${entry.name} got ${entry.score} of 100`;
       entryP.className = 'text-sm mb-3 font-bold text-[#2e4681]';
       leaderboardDiv.appendChild(entryP);
     });
