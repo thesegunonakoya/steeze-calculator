@@ -8,7 +8,7 @@ fetch('https://api.steezecalculator.com/api/leaderboard')
   .then(data => {
     data.sort((a, b) => b.score - a.score);
     const top10 = data.slice(0, 50);
-    const leaderboardDiv = document.getElementById('hallOfFame');
+    const leaderboardDiv = document.getElementById('fullLeaderboard');
     leaderboardDiv.innerHTML = '';
 
     top10.forEach(entry => {
