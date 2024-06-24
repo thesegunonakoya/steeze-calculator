@@ -1,4 +1,5 @@
 User-agent: *
+Allow: /ads.txt
 Allow: /
 Crawl-delay: 1
 
