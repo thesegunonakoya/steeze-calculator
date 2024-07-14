@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /ads.txt
+Allow: /
+Crawl-delay: 1
+
+Sitemap: https://steezecalculator.com/sitemap.xml

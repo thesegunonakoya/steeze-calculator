@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1016193047089229"
+        crossorigin="anonymous"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2M5VD1NPWH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2M5VD1NPWH');
+    </script>
+    <meta charset="utf-8">
+    <title>The Steeze Calculator!</title>
+    <meta name="title" content="The Steeze Calculator!">
+    <meta name="description"
+        content="a playful web app created to determine your 'steeze' score based on fun scenario-based questions.">
+    <meta name="keywords" content="steeze calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://steezecalculator.com/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://steezecalculator.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://steezecalculator.com/favicon.png" type="image/png">
+    <script src="js/leaderboard.js"></script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://steezecalculator.com">
+    <meta property="og:title" content="The Steeze Calculator!">
+    <meta property="og:description"
+        content="a playful web app created to determine your 'steeze' score based on fun scenario-based questions.">
+    <meta property="og:image" content="https://steezecalculator.com/img/jtozcnepvtt5yeqakixh-384.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://steezecalculator.com">
+    <meta property="twitter:title" content="The Steeze Calculator!">
+    <meta property="twitter:description"
+        content="a playful web app created to determine your 'steeze' score based on fun scenario-based questions.">
+    <meta property="twitter:image" content="https://steezecalculator.com/img/jtozcnepvtt5yeqakixh-384.jpg">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Steeze Calculator!",
+          "url": "https://steezecalculator.com/"
+        }
+        </script>
+
+        
+
+</head>
+
+<body class="text-[#0C0C0C] bg-[#faf9f6]">
+    <header>
+        <h1 class="bg-[#0f172a] text-2xl text-center font-bold py-4 text-white px-4"><a
+                href="https://steezecalculator.com/">The Steeze Calculator 🌊</a></h1>
+        <div class="text-[#ffffff] text-sm bg-[#1e293b] text-center font-bold pt-3 pb-3 px-8">
+            Are you a certified steeze OG 😎 or just another regular peasant 💀? Lets find out with our steeze
+            calculator! 🔥 </div>
+    </header>
+    
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '384769a0064a1100b122306bdc734071',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.topcreativeformat.com/384769a0064a1100b122306bdc734071/invoke.js"></script>
+
+    <section>
+        <div id="captureDiv" class="py-3 md:px-5">
+            <div id="score-container" style="display: none;"
+                class="text-center items-center rounded-md bg-red-400 p-6 m-3 border-[1px] border-[#0f172a]">
+                <span class="text-sm font-bold text-white text-[18px]"><span id="score"></span> <br>
+                    <div class="text-center space-x-1"><button id="refresh"
+                            class="mt-2 mb-2 text-white bg-[#0f172a] hover:bg-red-400 rounded-md px-3 py-3 md:px-3 md:py-3 cursor-pointer">Refresh</button>
+                        <button onclick="captureDiv()" id="screenshotButton"
+                            class="mt-2 mb-2 text-white bg-[#0f172a] hover:bg-red-400 rounded-md px-3 py-3 md:px-3 md:py-3">Screenshot</button>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="flex flex-col md:flex-row md:mx-5 mb-5 md:mb-5">
+            <main class="md:w-[70%]">
+
+
+                <div class="text-sm text-center rounded-md bg-red-400 p-6 m-3 text-white font-semibold"
+                    id="freshNotice">
+                    Pick an option for each scenerio below as fast as you can for a more accurate score! Don't overthink
+                    it!
+                </div>
+
+                <div class="text-sm text-center rounded-md bg-red-600 p-6 m-3 border-[1px] border-[#0f172a] text-white font-semibold"
+                    id="error-message" style="display: none;">
+                    You need to enter a name! You dont have eyes or??
+                </div>
+
+                <div class="text-sm text-center rounded-md bg-red-600 p-6 m-3 border-[1px] border-[#0f172a] text-white font-semibold"
+                    id="qerror-message" style="display: none;">
+                    You need to answer all the questions! Do i still need to tell you this??
+                </div>
+
+                <div class="rounded-md bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                    <h3 class="font-bold text-[#0f172a] text-[18px] mb-5">What does your crush calls you? 🤔 <span
+                            class="text-xs">(Yes, we need to know!)</span></h3>
+                    <div class="full-width w-full">
+
+                        <input id="name" type="input" name="title" placeholder="e.g Stupid fool"
+                            class="w-full text-sm font-bold border-[1px] text-[#1e293b] border-[#0f172a] p-3 rounded-md"
+                            style="background-color: #faf9f6;">
+                    </div>
+                </div>
+
+                <form action="" id="steeze">
+                    <div id="firstQuestion" class="rounded-lg bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                        <h3 class="font-bold text-[#0f172a] text-[18px] mb-5">You are at the market buying plantains.
+                            The market woman says
+                            a bunch of 3 small plantains costs 5k. What do you do? 🤔</h3>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq1" type="radio" name="q1" value="A" class="q1 mr-4"><span> Pull out cash and pay
+                                    the 5k immediately!</span>
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq2" type="radio" name="q1" value="B" class="q1 mr-4"><span> 'Mumsy stop playing,
+                                    are you selling me gold-plated plantain?'</span>
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq3" type="radio" name="q1" value="C" class="q1 mr-4"><span> Get on your kneels and
+                                    beg with tears in your eyes for 1k last price!</span>
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq4" type="radio" name="q1" value="D" class="q1 mr-4"><span> Bargain for 3k last
+                                    price and go even lower after she agrees!</span>
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq5" type="radio" name="q1" value="E" class="q1 mr-4"><span> Walk away and pretend
+                                    like nothing just happened!</span>
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq6" type="radio" name="q1" value="F" class="q1 mr-4"><span> The plantain get
+                                    superpowers? I don't even like plantain like that!</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rounded-lg bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                        <h3 class="font-bold text-[#0f172a] text-[18px] mb-5">You just finished eating at a local
+                            restaurant in your area
+                            and you are thirsty AF. Its looking like you are about to faint from dehydration. What do
+                            you do? 🤔</h3>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="sq1" type="radio" name="q2" value="A" class="fq2 mr-4"> Wait until i get home
+                                to
+                                drink water, we have river at home!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="sq2" type="radio" name="q2" value="B" class="fq2 mr-4"> Order a chilled
+                                bottle of water to push down the food!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="sq3" type="radio" name="q2" value="C" class="fq2 mr-4"> Order sachet water
+                                (pure
+                                water) before i dehydrate!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="sq4" type="radio" name="q2" value="D" class="fq2 mr-4"> Drink the free
+                                protein water
+                                offered at the canteen. Extra nutrients!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="sq5" type="radio" name="q2" value="E" class="fq2 mr-4"> Swallow saliva and
+                                keep
+                                it moving!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="sq6" type="radio" name="q2" value="F" class="fq2 mr-4"> What is water?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rounded-lg bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                        <h3 class="font-bold text-[#0f172a] text-[18px] mb-5">You are at a party and the
+                            multi-millionaires are making it
+                            rain, you have 2500 naira on you and you are sure you can 'codedly' pick thirteen 1000 naira
+                            notes from the ground. What do you do? 🤔</h3>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="tq1" type="radio" name="q3" value="A" class="fq3 mr-4"> Pick 3 of the naira
+                                notes
+                                and lock up. Small wins matter!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="tq2" type="radio" name="q3" value="B" class="fq3 mr-4"> Finesse all the 13
+                                notes
+                                and call it a day!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="tq3" type="radio" name="q3" value="C" class="fq3 mr-4"> Make sure my bag is
+                                filled with sprayed money
+                                before leaving there!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="tq4" type="radio" name="q3" value="D" class="fq3 mr-4"> I don't need the
+                                money,
+                                I'm good with my 2500 naira. Humble sapa billionaire vibes.
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="tq5" type="radio" name="q3" value="E" class="fq3 mr-4"> I would make my 2500
+                                naira rain, me sef no small!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="tq6" type="radio" name="q3" value="F" class="fq3 mr-4"> Why is rain falling
+                                at
+                                the party? Is this a weather event?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rounded-lg bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                        <h3 class="font-bold text-[#0f172a] text-[18px] mb-5">You are suddenly being approached,
+                            challenged and questioned
+                            by a mad person in a crowded market. What do you do? 🤔</h3>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq1" type="radio" name="q4" value="A" class="fq4 mr-4"> Scream at the top of
+                                my
+                                voice for help!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq2" type="radio" name="q4" value="B" class="fq4 mr-4"> Run away as fast as I
+                                can. Catch me if you can!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq3" type="radio" name="q4" value="C" class="fq4 mr-4"> Remain calm and go
+                                with
+                                the flow. Maybe we can be friends?
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq4" type="radio" name="q4" value="D" class="fq4 mr-4"> Change it for the mad
+                                person. Two can play this game!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq5" type="radio" name="q4" value="E" class="fq4 mr-4"> I would simply start
+                                speaking in french. Bonjour, ça va?
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fq6" type="radio" name="q4" value="F" class="fq4 mr-4"> What am I doing in
+                                the
+                                market?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rounded-lg bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                        <h3 class="font-bold text-[#0f172a] text-[18px] mb-5">You tripped and fell in public, you can
+                            feel you are possibly
+                            injured. What do you do? 🤔</h3>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fiq1" type="radio" name="q5" value="A" class="fq5 mr-4"> Stay down in shame
+                                and
+                                cry. Maybe someone will bring ice cream?
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fiq2" type="radio" name="q5" value="B" class="fq5 mr-4"> Stay down and act
+                                like I’m inspecting the ground. 'Wow, this pavement is really interesting!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fiq3" type="radio" name="q5" value="C" class="fq5 mr-4"> Pretend to be dead!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fiq4" type="radio" name="q5" value="D" class="fq5 mr-4"> Blame the goverment.
+                                It's their fault, obviously!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fiq5" type="radio" name="q5" value="E" class="fq5 mr-4"> Get up and transfer
+                                aggression to the nearest person. Someone has to pay!
+                            </label>
+                            <label class="font-bold text-sm text-[#1e293b] hover:text-[#2e4681] block mb-1 mr-4">
+                                <input id="fiq6" type="radio" name="q5" value="F" class="fq5 mr-4"> Completely vanish
+                                from
+                                the surface of the earth!
+                            </label>
+                        </div>
+                    </div>
+
+
+
+                    <div class="rounded-md bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                        <button id="check"
+                            class="rounded-md font-bold text-white px-7 py-4 bg-[#0f172a] hover:bg-red-400">Get Your
+                            Steeze
+                            Score</button>
+                    </div>
+                </form>
+
+            </main>
+
+
+
+            <aside class="md:w-[30%]">
+
+                <div class="rounded-md bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                    <h3 class="font-bold text-[#0f172a] text-[18px] mb-2">Spread the word 🍹</h3>
+                    <p class="text-sm mb-6 font-bold text-[#1e293b] leading-6">Does your friends know there's a steeze
+                        calculator in town, or are they still trying to calculate their swag manually?</p>
+                    <p class="text-sm font-bold text-[#1e293b]">
+                    <div class="mb-2 space-x-1">
+                        <a href="whatsapp://send?text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20at%20https%3A%2F%2Fsteezecalculator.com%20and%20show%20me%20your%20result%21"
+                            data-action="share/whatsapp/share" target="_blank" rel="noopener noreferrer"
+                            class="mb-2 text-xs font-semibold text-white bg-[#0f172a] rounded-md px-3 py-3 md:px-4 md:py-4 hover:bg-red-400">Share
+                            to WhatsApp</a>
+                        <a href="https://twitter.com/intent/tweet?url=https://steezecalculator.com/&text=shey%20you%20get%20steeze%20abi%3F%20oya%20test%20your%20steeze%20and%20show%20me%20your%20result%21"
+                            target="_blank" rel="noopener noreferrer"
+                            class="mb-2 text-xs font-semibold text-white bg-[#0f172a] rounded-md px-3 py-3 md:px-4 md:py-4 hover:bg-red-400">Share
+                            to Twitter</a>
+                    </div>
+                    </p>
+                </div>
+
+
+                <div class="rounded-md bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                    <h3 class="font-bold text-[#0f172a] text-[18px] mb-2">Our play project 🌻</h3>
+                    <p class="text-sm mb-3 font-bold text-[#1e293b] leading-6">Out of the blue, we had a light bulb
+                        moment to create a web app centered around one of the most overused slangs in our
+                        cohort—'steeze'.</p>
+                    <p class="text-sm mb-3 font-bold text-[#1e293b] leading-6">In case you're out of the loop or live
+                        under a rock, steeze is all about that effortless flow, unique style, and the confidence and
+                        skill that leave folks awestruck. You either have it or you don't. <span
+                            class="text-[#2e4681]">Steeze can't be forced!</span></p>
+                    <p class="text-sm mb-1 font-bold text-[#1e293b] leading-6">Spread the word to your guys, enjoy our
+                        steeze calculator, and knock 'em dead!</p>
+                </div>
+
+                <div class="rounded-md bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                    <h3 class="font-bold text-[#0f172a] text-[18px] mb-2">Hall of fame 🤩</h3>
+                    <p class="text-sm mb-5 font-bold text-[#1e293b] leading-6">These people did so well and flexed so
+                        hard, we had to
+                        flaunt their score! Can you dare to outshine them?</p>
+                    <p class="text-sm mb-3 font-bold text-[#2e4681]">
+                    <p class="text-[#2e4681]" id="hallOfFame"></p>
+                    <p class="text-sm mb-3 font-bold text-[#2e4681]"><a
+                            href="https://steezecalculator.com/leaderboard.html">View full list</a></p>
+                    </p>
+                </div>
+
+                <div class="rounded-md bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                    <h3 class="font-bold text-[#0f172a] text-[18px] mb-2">Legends in the making 🧠</h3>
+                    <p class="text-sm mb-3 font-bold text-[#1e293b] leading-6">These people woke up one morning and
+                        decided to start working on this absolute madness of a project!</p>
+                    <h2 class="text-sm mb-3 font-bold text-[#2e4681]"><a
+                            href="https://github.com/thesegunonakoya">Oluwasegun
+                            Onakoya</a></h2>
+                    <h2 class="text-sm mb-3 font-bold text-[#2e4681]"><a href="https://github.com/faahvor">Favour
+                            Ifurukpe</a></h2>
+                    <h2 class="text-sm mb-3 font-bold text-[#2e4681]"><a href="https://github.com/tobi4u">Olayinka
+                            Balogun</a></h2>
+                    <p class="text-sm mb-3 font-bold text-[#2e4681]"><a
+                            href="https://steezecalculator.com/contributors.html">View full details</a></p>
+                </div>
+
+                <div class="rounded-md bg-[#e6e8ea] p-6 m-3 border-[1px] border-[#0f172a]">
+                    <h3 class="font-bold text-[#0f172a] text-[18px] mb-2">Honorable shout-outs 🥇</h3>
+                    <p class="text-sm mb-3 font-bold text-[#1e293b] leading-6">These absolute MVPs helped us turn our
+                        chaos into a carnival and sprinkle stardust on our mayhem!</p>
+                    <h2 class="text-sm mb-3 font-bold text-[#2e4681]"><a href="https://github.com/deji-ice">Ayodeji
+                            Atanda</a></h2>
+                    <h2 class="text-sm mb-3 font-bold text-[#2e4681]"><a href="https://github.com/Horsmanayo">Usman Oni
+                            Ademola</a></h2>
+                    <p class="text-sm mb-3 font-bold text-[#2e4681]"><a
+                            href="https://steezecalculator.com/shoutouts.html">View full list</a></p>
+                </div>
+
+
+            </aside>
+
+        </div>
+    </section>
+
+    <footer class="text-[#ffffff] text-sm bg-[#0f172a] text-center font-bold pt-7 pb-7 px-8">
+        © 2024 The Steeze Calculator. All content is the original creation of the contributors and the entirety of this
+        site is protected by copyright.</footer>
+
+    <!-- <script src="js/firstQuestion.js"></script> -->
+    <script src="js/index.js"></script>
+    <script src="js/screenshot.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+
+</html>
